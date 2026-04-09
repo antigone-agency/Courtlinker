@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CourtLinker | Trouvez votre prochain match de Tennis &amp; Padel</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#FFD580",
+                        "surface-container-low": "#131313",
+                        "on-tertiary-fixed-variant": "#5A3200",
+                        "secondary-dim": "#E0A810",
+                        "surface-container-high": "#1f1f1f",
+                        "on-surface": "#ffffff",
+                        "secondary": "#F5C842",
+                        "tertiary-dim": "#EDAB18",
+                        "on-primary-fixed-variant": "#3D2000",
+                        "primary-fixed": "#EDAB18",
+                        "surface-container-lowest": "#000000",
+                        "on-error-container": "#ffd2c8",
+                        "error": "#ff7351",
+                        "outline": "#757575",
+                        "surface": "#0e0e0e",
+                        "primary-container": "#EDAB18",
+                        "inverse-primary": "#5A3200",
+                        "on-tertiary-fixed": "#3D2000",
+                        "surface-container": "#191919",
+                        "primary-dim": "#D4961A",
+                        "surface-dim": "#0e0e0e",
+                        "inverse-surface": "#f9f9f9",
+                        "on-tertiary": "#5A3200",
+                        "surface-variant": "#262626",
+                        "on-primary": "#1a0c00",
+                        "surface-tint": "#EDAB18",
+                        "on-surface-variant": "#ababab",
+                        "on-secondary-fixed": "#3D2000",
+                        "error-container": "#b92902",
+                        "on-secondary": "#472E00",
+                        "secondary-container": "#6B4800",
+                        "inverse-on-surface": "#555555",
+                        "on-error": "#450900",
+                        "primary-fixed-dim": "#C8880F",
+                        "surface-container-highest": "#262626",
+                        "secondary-fixed-dim": "#E0A810",
+                        "on-primary-container": "#3D2000",
+                        "tertiary-container": "#FFC72C",
+                        "on-background": "#ffffff",
+                        "tertiary-fixed": "#FFC72C",
+                        "error-dim": "#d53d18",
+                        "tertiary-fixed-dim": "#EDAB18",
+                        "surface-bright": "#2c2c2c",
+                        "on-tertiary-container": "#4A2E00",
+                        "primary": "#EDAB18",
+                        "on-secondary-fixed-variant": "#5A3200",
+                        "outline-variant": "#484848",
+                        "on-primary-fixed": "#2D1400",
+                        "secondary-fixed": "#F5C842",
+                        "background": "#0e0e0e",
+                        "on-secondary-container": "#FFF0CC"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #0e0e0e;
+            color: #ffffff;
+        }
+
+        .font-headline {
+            font-family: 'Epilogue', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .primary-gradient {
+            background: linear-gradient(135deg, #F5C842 0%, #EDAB18 100%);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-on-primary">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+        <div class="flex justify-between items-center px-8 py-2 max-w-7xl mx-auto w-full">
+            <div class="flex items-center">
+                <img src="COURTLINKER_LOGO__copie__1__copie_page-0001-removebg-preview.png" alt="CourtLinker"
+                    class="w-auto object-contain" style="height:80px;" />
+            </div>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-[#EDAB18] font-bold border-b-2 border-[#EDAB18] pb-1 hover:opacity-80 transition-all duration-300"
+                    href="#">L'application</a>
+                <a class="text-zinc-400 font-medium hover:text-white transition-colors hover:opacity-80 transition-all duration-300"
+                    href="#">Pour les Coachs</a>
+                <a class="text-zinc-400 font-medium hover:text-white transition-colors hover:opacity-80 transition-all duration-300"
+                    href="#">À propos</a>
+            </div>
+            <button
+                class="bg-[#EDAB18] text-zinc-950 px-6 py-2.5 rounded-full font-bold text-sm hover:opacity-80 transition-all duration-300 scale-95 active:scale-90 transition-transform">
+                Rejoins la liste d'attente
+            </button>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-24 pb-16 md:pt-28 md:pb-24 overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none">
+            </div>
+            <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative z-10">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high text-primary text-xs font-bold tracking-widest uppercase mb-6">Lancement
+                        Prochain</span>
+                    <h1
+                        class="font-headline text-5xl md:text-7xl font-black tracking-[-0.04em] leading-[1.05] text-on-surface mb-8">
+                        Trouve un partenaire. Réserve un cours. <span class="text-primary-fixed">Joue plus
+                            souvent.</span>
+                    </h1>
+                    <p class="text-on-surface-variant text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                        CourtLinker réunit joueurs et coachs de tennis et de padel sur une seule application, près de
+                        chez toi.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="primary-gradient text-on-primary font-bold px-8 py-4 rounded-xl text-lg hover:shadow-[0_0_20px_rgba(246,255,190,0.2)] transition-all scale-100 active:scale-95">
+                            Rejoins la liste d'attente
+                        </button>
+                        <button
+                            class="border border-outline-variant/15 text-on-surface font-semibold px-8 py-4 rounded-xl text-lg hover:bg-surface-container-high transition-colors">
+                            Découvrir CourtLinker
+                        </button>
+                    </div>
+                </div>
+                <div class="relative flex justify-center items-center">
+                    <!-- Decorative Circle Glow -->
+                    <div class="absolute inset-0 bg-primary/10 blur-[80px] rounded-full scale-75"></div>
+                    <!-- iPhone Mockup -->
+                    <div
+                        class="relative w-[320px] h-[650px] bg-[#000000] rounded-[3rem] p-3 border-[8px] border-zinc-800 shadow-2xl overflow-hidden">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-zinc-800 rounded-b-2xl z-20">
+                        </div>
+                        <img class="w-full h-full object-cover rounded-[2.2rem]" alt="CourtLinker app screenshot"
+                            src="3-Home.png" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Promise Section -->
+        <section class="py-24 bg-surface-container-low">
+            <div class="max-w-4xl mx-auto px-8 text-center">
+                <h2 class="font-headline text-4xl md:text-5xl font-black mb-8">Le tennis et le padel, enfin plus simples
+                    à organiser.</h2>
+                <p class="text-on-surface-variant text-xl leading-relaxed">
+                    Trouver un partenaire disponible, réserver un cours, organiser une partie, découvrir où jouer…
+                    CourtLinker te fait gagner du temps et te permet de te concentrer sur l’essentiel : jouer et
+                    progresser.
+                </p>
+                <div class="mt-12 flex justify-center gap-4">
+                    <span class="material-symbols-outlined text-primary text-4xl">sports_tennis</span>
+                    <span class="material-symbols-outlined text-primary text-4xl">group</span>
+                    <span class="material-symbols-outlined text-primary text-4xl">stadium</span>
+                </div>
+            </div>
+        </section>
+        <!-- Features Section -->
+        <section class="py-32">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- F1 -->
+                    <div
+                        class="bg-surface-container-high p-10 rounded-lg group hover:bg-surface-container-highest transition-all duration-500 hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-3xl">person_search</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-4">Trouve le bon partenaire</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Joue avec des personnes proches de toi, selon
+                            ton niveau et tes disponibilités.</p>
+                    </div>
+                    <!-- F2 -->
+                    <div
+                        class="bg-surface-container-high p-10 rounded-lg group hover:bg-surface-container-highest transition-all duration-500 hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-3xl">school</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-4">Réserve un cours avec un coach</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Progresse plus vite grâce à des coachs
+                            disponibles près de chez toi.</p>
+                    </div>
+                    <!-- F3 -->
+                    <div
+                        class="bg-surface-container-high p-10 rounded-lg group hover:bg-surface-container-highest transition-all duration-500 hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-3xl">add_circle</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-4">Crée ta partie</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Propose un match, laisse d’autres joueurs te
+                            rejoindre et passe à l’action.</p>
+                    </div>
+                    <!-- F4 -->
+                    <div
+                        class="bg-surface-container-high p-10 rounded-lg group hover:bg-surface-container-highest transition-all duration-500 hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-3xl">map</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-4">Découvre les terrains autour de toi</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Repère plus facilement où jouer et gagne du
+                            temps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works Section -->
+        <section class="py-24 bg-surface-container-lowest">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="font-headline text-4xl font-black mb-20 text-center">Comment ça marche</h2>
+                <div class="grid md:grid-cols-3 gap-12 relative">
+                    <!-- Decorative Line -->
+                    <div
+                        class="hidden md:block absolute top-10 left-[15%] right-[15%] h-[1px] bg-outline-variant/30 z-0">
+                    </div>
+                    <!-- Step 1 -->
+                    <div class="relative z-10 text-center px-6">
+                        <div
+                            class="w-20 h-20 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-8 border border-primary/20">
+                            <span class="font-headline text-2xl font-black text-primary">01</span>
+                        </div>
+                        <h4 class="font-headline text-xl font-bold mb-4">Crée ton profil</h4>
+                        <p class="text-on-surface-variant">Indique ton sport, ton niveau et ce que tu recherches.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative z-10 text-center px-6">
+                        <div
+                            class="w-20 h-20 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-8 border border-primary/20">
+                            <span class="font-headline text-2xl font-black text-primary">02</span>
+                        </div>
+                        <h4 class="font-headline text-xl font-bold mb-4">Trouve un joueur ou un coach</h4>
+                        <p class="text-on-surface-variant">Parcours les profils, les parties et les cours disponibles
+                            autour de toi.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative z-10 text-center px-6">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-8">
+                            <span class="font-headline text-2xl font-black text-on-primary">03</span>
+                        </div>
+                        <h4 class="font-headline text-xl font-bold mb-4">Joue, progresse, recommence</h4>
+                        <p class="text-on-surface-variant">Moins de recherche. Plus de jeu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Coach Block -->
+        <section class="py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-8">
+                <div
+                    class="bg-surface-container-high rounded-xl p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-full h-full bg-primary/5 -skew-x-12 translate-x-1/2 pointer-events-none">
+                    </div>
+                    <div class="relative z-10 max-w-xl">
+                        <h2 class="font-headline text-4xl font-black mb-6">Vous êtes coach ?</h2>
+                        <p class="text-on-surface-variant text-xl mb-10 leading-relaxed">
+                            Développez votre visibilité, recevez des demandes de cours et faites grandir votre activité
+                            avec CourtLinker.
+                        </p>
+                        <button
+                            class="bg-primary text-on-primary font-bold px-10 py-4 rounded-xl hover:opacity-90 transition-all">
+                            Rejoindre CourtLinker en tant que coach
+                        </button>
+                    </div>
+                    <div class="relative z-10 grid grid-cols-2 gap-4">
+                        <img class="w-48 h-64 object-cover rounded-lg"
+                            data-alt="professional tennis coach with racket standing on a clay court with bright sunlight"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjNdCpB0YL26jAI8I7PPlVsMvmaGPjWZp4SRUIUPgPTxUxAX9pPhwuT5nNduR_0kC1YL687QStXDkJMlTV8hk0ZA5sqtGGbLICwwAaQ5MdZEzkUHAAYgFX_N04oHGWMzXpVjPfy5zEb82a0T-qvkswkCYH8e0ekncoLUeAbN-cAn9xZfZFxEyHBZ8baa4niXDQ1LhhBCjZLw4QxUdeQ0wziYBxW1pX-xX9lswbSUYf0isE5R02gLC9UA8bfn30rhMyqLVu_BJQWA" />
+                        <img class="w-48 h-64 object-cover rounded-lg mt-12"
+                            data-alt="dynamic shot of a padel player hitting a ball with intense focus in a modern glass court"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsYBrdpRMQrLOHSTwYXaK753QFVAAwcm9ZpkrNK5rmdTVLs_cJNPljInYGjhRwbalaK3NwVSu0WXkRCELxfUnzdBHIizkMBvlnze62sO3KYtiO47gKvnzaYN0TwlregiyuEzEe6gqBxtKXHEIrrXCZKMm6dQj1YZQa_vzc-oDN04sVyQg2wtrmlzBBe4ZtdQUJiBwqozmqtFl_1QclFCaqvDs617LizloV_BzLm0QRzSiwWsCBvEDt8_D9qrQY_--K1JYsxonBZw" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brand Emotional Section -->
+        <section class="py-32 bg-surface">
+            <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20 items-center">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-primary/10 rounded-lg blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    </div>
+                    <img class="relative rounded-lg w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl"
+                        data-alt="lifestyle photography of two padel players high-fiving after a point on a blue court with modern lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF3LLBP6ntVIKha2IgN0ymwEZMnj4hY-lj8uSwRhvl0mOSXBzBZ15ggN8wHvvaxHbFO7MXJshfdunpBjRgQB8xx86ZGitKNDLUwl1NvvdRnU7sIqxLo53qSP07FbT97-UEskXP6KCRSrEdXbM7QZG-eJ90OKrO3NGvTOfCNtXZU3PVt_nPVz2Sds_xS8Cuzgyk3pZCLsqo7F6M6RPzikimgS2oIj2FeS8gEOuoyLAPfMkqUPnVpL8ksCdTDGw-1UVjTtcycx1aFQ" />
+                </div>
+                <div>
+                    <h2 class="font-headline text-4xl font-black mb-8">Une application pensée pour les passionnés.</h2>
+                    <p class="text-on-surface-variant text-xl leading-relaxed mb-8">
+                        Que tu sois débutant, joueur régulier, compétiteur ou simplement passionné, CourtLinker a été
+                        conçu pour rendre le tennis et le padel plus accessibles, plus fluides et plus vivants.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA Section -->
+        <section class="py-32 bg-surface-container-low border-y border-outline-variant/10">
+            <div class="max-w-4xl mx-auto px-8 text-center">
+                <h2 class="font-headline text-5xl font-black mb-8">Sois parmi les premiers à rejoindre CourtLinker.</h2>
+                <p class="text-on-surface-variant text-xl mb-12">
+                    Inscris-toi pour être informé du lancement et accéder en avant-première à l’application.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input
+                        class="flex-1 bg-surface-container-high border-none rounded-xl px-6 py-4 text-white focus:ring-2 focus:ring-primary placeholder:text-zinc-600"
+                        placeholder="ton@email.com" type="email" />
+                    <button
+                        class="bg-primary text-on-primary font-bold px-8 py-4 rounded-xl hover:opacity-90 transition-all whitespace-nowrap">
+                        Recevoir un accès anticipé
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-zinc-950 w-full py-12 px-8 border-t border-zinc-800/15">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto w-full gap-8">
+            <div class="text-xl font-black text-white">CourtLinker</div>
+            <div class="flex flex-wrap justify-center gap-8 text-zinc-500 font-medium text-sm">
+                <a class="hover:text-[#EDAB18] transition-colors" href="#">Mentions légales</a>
+                <a class="hover:text-[#EDAB18] transition-colors" href="#">CGU</a>
+                <a class="hover:text-[#EDAB18] transition-colors" href="#">Politique de confidentialité</a>
+                <a class="hover:text-[#EDAB18] transition-colors" href="#">Contact</a>
+            </div>
+            <div class="text-zinc-500 text-sm">
+                © 2024 CourtLinker. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
