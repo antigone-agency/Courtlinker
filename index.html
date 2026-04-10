@@ -114,6 +114,23 @@
         .primary-gradient {
             background: linear-gradient(135deg, #F5C842 0%, #EDAB18 100%);
         }
+
+        /* === LOGO : change uniquement la valeur px ici pour redimensionner === */
+        .nav-logo {
+            height: 130px !important;
+            width: auto !important;
+            max-width: none !important;
+            object-fit: contain !important;
+            display: block !important;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .nav-logo-wrapper {
+            position: relative;
+            width: 90px;
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -121,10 +138,10 @@
     <!-- TopNavBar -->
     <nav
         class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-        <div class="flex justify-between items-center px-8 py-2 max-w-7xl mx-auto w-full">
-            <div class="flex items-center">
+        <div class="flex justify-between items-center px-8 py-3 max-w-7xl mx-auto w-full" style="height:64px;">
+            <div class="nav-logo-wrapper flex items-center">
                 <img src="COURTLINKER_LOGO__copie__1__copie_page-0001-removebg-preview.png" alt="CourtLinker"
-                    class="w-auto object-contain" style="height:80px;" />
+                    class="nav-logo" />
             </div>
             <div class="hidden md:flex items-center gap-10">
                 <a class="text-[#EDAB18] font-bold border-b-2 border-[#EDAB18] pb-1 hover:opacity-80 transition-all duration-300"
